@@ -6,7 +6,7 @@
 #
 Name     : pypi-psycopg2
 Version  : 2.9.3
-Release  : 82
+Release  : 83
 URL      : https://files.pythonhosted.org/packages/d1/1e/b450599a27b1809bccbd4e369f397cb18dc56b875778d961f9ae180b54b7/psycopg2-2.9.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d1/1e/b450599a27b1809bccbd4e369f397cb18dc56b875778d961f9ae180b54b7/psycopg2-2.9.3.tar.gz
 Source1  : https://files.pythonhosted.org/packages/d1/1e/b450599a27b1809bccbd4e369f397cb18dc56b875778d961f9ae180b54b7/psycopg2-2.9.3.tar.gz.asc
@@ -17,9 +17,6 @@ Requires: pypi-psycopg2-license = %{version}-%{release}
 Requires: pypi-psycopg2-python = %{version}-%{release}
 Requires: pypi-psycopg2-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: psycopg2
-Provides: psycopg2-python
-Provides: psycopg2-python3
 BuildRequires : postgresql-dev
 BuildRequires : python3-dev
 
@@ -81,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641472592
+export SOURCE_DATE_EPOCH=1651168337
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
