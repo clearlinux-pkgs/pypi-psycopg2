@@ -7,15 +7,13 @@
 #
 Name     : pypi-psycopg2
 Version  : 2.9.6
-Release  : 111
+Release  : 112
 URL      : https://files.pythonhosted.org/packages/af/c4/5726cddb53fe52f0e839eb3da04322364f14493217ebd5818cc5e4c948a5/psycopg2-2.9.6.tar.gz
 Source0  : https://files.pythonhosted.org/packages/af/c4/5726cddb53fe52f0e839eb3da04322364f14493217ebd5818cc5e4c948a5/psycopg2-2.9.6.tar.gz
 Source1  : https://files.pythonhosted.org/packages/af/c4/5726cddb53fe52f0e839eb3da04322364f14493217ebd5818cc5e4c948a5/psycopg2-2.9.6.tar.gz.asc
 Summary  : psycopg2 - Python-PostgreSQL Database Adapter
 Group    : Development/Tools
 License  : LGPL-3.0
-Requires: pypi-psycopg2-filemap = %{version}-%{release}
-Requires: pypi-psycopg2-lib = %{version}-%{release}
 Requires: pypi-psycopg2-license = %{version}-%{release}
 Requires: pypi-psycopg2-python = %{version}-%{release}
 Requires: pypi-psycopg2-python3 = %{version}-%{release}
@@ -29,24 +27,6 @@ BuildRequires : python3-dev
 %description
 psycopg2 - Python-PostgreSQL Database Adapter
 =============================================
-
-%package filemap
-Summary: filemap components for the pypi-psycopg2 package.
-Group: Default
-
-%description filemap
-filemap components for the pypi-psycopg2 package.
-
-
-%package lib
-Summary: lib components for the pypi-psycopg2 package.
-Group: Libraries
-Requires: pypi-psycopg2-license = %{version}-%{release}
-Requires: pypi-psycopg2-filemap = %{version}-%{release}
-
-%description lib
-lib components for the pypi-psycopg2 package.
-
 
 %package license
 Summary: license components for the pypi-psycopg2 package.
@@ -68,7 +48,6 @@ python components for the pypi-psycopg2 package.
 %package python3
 Summary: python3 components for the pypi-psycopg2 package.
 Group: Default
-Requires: pypi-psycopg2-filemap = %{version}-%{release}
 Requires: python3-core
 Provides: pypi(psycopg2)
 
@@ -88,15 +67,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680552286
+export SOURCE_DATE_EPOCH=1683042886
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -131,14 +110,6 @@ popd
 %files
 %defattr(-,root,root,-)
 
-%files filemap
-%defattr(-,root,root,-)
-/usr/share/clear/filemap/filemap-pypi-psycopg2
-
-%files lib
-%defattr(-,root,root,-)
-/usr/share/clear/optimized-elf/other*
-
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/pypi-psycopg2/8962684fea8c5eca411c030d957afd571d2069a1
@@ -148,4 +119,5 @@ popd
 
 %files python3
 %defattr(-,root,root,-)
+/V3/usr/lib/python3*/*
 /usr/lib/python3*/*
