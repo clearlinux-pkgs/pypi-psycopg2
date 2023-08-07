@@ -1,6 +1,15 @@
 Current release
 ---------------
 
+What's new in psycopg 2.9.7
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Fix propagation of exceptions raised during module initialization
+  (:ticket:`#1598`).
+- Fix building when pg_config returns an empty string (:ticket:`#1599`).
+- Wheel package compiled against OpenSSL 1.1.1v.
+
+
 What's new in psycopg 2.9.6
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
