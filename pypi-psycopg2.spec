@@ -5,7 +5,7 @@
 #
 Name     : pypi-psycopg2
 Version  : 2.9.7
-Release  : 118
+Release  : 119
 URL      : https://files.pythonhosted.org/packages/f7/fa/6e6bb7a7bbe4e02b35aa2fc009fb53221663a5e07e333b72cb5a85e4dbb0/psycopg2-2.9.7.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f7/fa/6e6bb7a7bbe4e02b35aa2fc009fb53221663a5e07e333b72cb5a85e4dbb0/psycopg2-2.9.7.tar.gz
 Summary  : psycopg2 - Python-PostgreSQL Database Adapter
@@ -64,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1691428313
+export SOURCE_DATE_EPOCH=1695153172
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
