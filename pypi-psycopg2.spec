@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-psycopg2
-Version  : 2.9.7
-Release  : 119
-URL      : https://files.pythonhosted.org/packages/f7/fa/6e6bb7a7bbe4e02b35aa2fc009fb53221663a5e07e333b72cb5a85e4dbb0/psycopg2-2.9.7.tar.gz
-Source0  : https://files.pythonhosted.org/packages/f7/fa/6e6bb7a7bbe4e02b35aa2fc009fb53221663a5e07e333b72cb5a85e4dbb0/psycopg2-2.9.7.tar.gz
+Version  : 2.9.8
+Release  : 120
+URL      : https://files.pythonhosted.org/packages/9e/78/3b15ee8bbbf36f8bace9b0e6fe8a7481372650c76bcf1a7de1ed723cce96/psycopg2-2.9.8.tar.gz
+Source0  : https://files.pythonhosted.org/packages/9e/78/3b15ee8bbbf36f8bace9b0e6fe8a7481372650c76bcf1a7de1ed723cce96/psycopg2-2.9.8.tar.gz
 Summary  : psycopg2 - Python-PostgreSQL Database Adapter
 Group    : Development/Tools
 License  : LGPL-3.0
@@ -53,10 +53,10 @@ python3 components for the pypi-psycopg2 package.
 
 
 %prep
-%setup -q -n psycopg2-2.9.7
-cd %{_builddir}/psycopg2-2.9.7
+%setup -q -n psycopg2-2.9.8
+cd %{_builddir}/psycopg2-2.9.8
 pushd ..
-cp -a psycopg2-2.9.7 buildavx2
+cp -a psycopg2-2.9.8 buildavx2
 popd
 
 %build
@@ -64,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1695153172
+export SOURCE_DATE_EPOCH=1695915712
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
